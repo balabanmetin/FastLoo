@@ -4,7 +4,7 @@
 
 This is a subquadratic algorithm for detecting backbone sequences that are discordant with a given input phylogeny. A usecase is when the input tree is computed using a seperate set of biological sequences on the same set of species. More concretely, the input tree can be species tree inferred using many genes and input alignment can be a single gene.
 
-The algorithm is subquatratic with respect to the number of genes thanks to APPLES-2.
+The algorithm is subquatratic with respect to the number of species thanks to APPLES-2.
 
 ### Usage
 
