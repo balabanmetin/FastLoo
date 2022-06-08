@@ -9,6 +9,9 @@
 # For protein alignment
 # FastLoo aln.fa backbone.nwk prot
 
+export SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+
 if [ "$3" == "prot" ]; then
 	run_apples.py -t $2 -p -s $1 -q $1 -o apples.jplace > fastloo.log 2>&1
 else
@@ -16,4 +19,4 @@ else
 fi
 
 gappa examine graft --jplace-path apples.jplace > fastloo.log 2>&1
-python fast_loo.py apples.newick 
+python $SCRIPTS_DIR/fast_loo.py apples.newick 
